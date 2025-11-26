@@ -11,13 +11,13 @@
 
 ## Project Overview
 
-This is my Secure Web Development CA project based on WackoPicko, a deliberately vulnerable PHP web application.
+This is my Secure Web Development CA project based on WackoPicko, a vulnerable PHP web application.
 
 **Project Goal:** Analyze and fix security vulnerabilities in the application.
 
 **Original Source:** https://github.com/adamdoupe/WackoPicko  
 **My Fork:** https://github.com/shamir-nci/WackoPicko  
-**Author:** Shamir Khan, Arizona State University
+**Author:** Shamir Khan, National College of Ireland
 
 ## Application Features
 
