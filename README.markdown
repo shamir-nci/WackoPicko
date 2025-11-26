@@ -17,7 +17,7 @@ This is my Secure Web Development CA project based on WackoPicko, a deliberately
 
 **Original Source:** https://github.com/adamdoupe/WackoPicko  
 **My Fork:** https://github.com/shamir-nci/WackoPicko  
-**Author:** Adam Doupé, Arizona State University
+**Author:** Shamir Khan, Arizona State University
 
 ## Application Features
 
@@ -28,11 +28,11 @@ This is my Secure Web Development CA project based on WackoPicko, a deliberately
 
 ## Selected Vulnerabilities to Fix
 
-1. SQL Injection: users/login.php
-2. Stored XSS: guestbook.php
-3. Weak Sessions: admin/login.php
-4. Directory Traversal: pictures/upload.php
-5. Reflected XSS: pictures/search.php
+1. **SQL Injection:** `users/login.php`
+2. **Stored XSS:** `guestbook.php`
+3. **Weak Sessions:** `admin/login.php`
+4. **Directory Traversal:** `pictures/upload.php`
+5. **Reflected XSS:** `pictures/search.php`
 
 ## Development Environment
 
@@ -42,19 +42,19 @@ This is my Secure Web Development CA project based on WackoPicko, a deliberately
 
 ## Project Timeline
 
-** Week 1:** Setup, planning and fix vulnerbilities
-** Week 2:** Fix 3 vulnerbilities and deploy app.
+- **Week 1:** Setup, planning and analyze vulnerabilities
+- **Week 2:** Fix 2 vulnerabilities and deploy app
 
 ## Repository Structure
 
 WackoPicko/
-├── README.md
-├── admin/
-├── users/
-├── pictures/
-├── guestbook.php
-├── current.sql
-└── upload/
+-- README.markdown/
+-- admin/
+-- users/
+-- pictures/
+-- guestbook.php
+-- current.sql
+-- upload/
 
 ## Current Status
 
@@ -62,6 +62,6 @@ WackoPicko/
 
 - [x] Repository forked
 - [x] GitHub account set up
-- [x] Readme Updated
+- [x] README updated
 
 **Last Updated:** November 26, 2025
