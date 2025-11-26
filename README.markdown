@@ -48,13 +48,21 @@ This is my Secure Web Development CA project based on WackoPicko, a vulnerable P
 ## Repository Structure
 
 WackoPicko/
+
 -- README.markdown/
+
 -- admin/
+
 -- users/
+
 -- pictures/
+
 -- guestbook.php
+
 -- current.sql
+
 -- upload/
+
 
 ## Current Status
 
