@@ -3,7 +3,6 @@
 ## My Information
 
 - **Name:** Shamir Khan
-- **Student ID:** 24244775
 - **Course:** Secure Web Development
 - **Institution:** National College of Ireland
 - **Academic Year:** 2025/2026
