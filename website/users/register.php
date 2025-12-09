@@ -20,15 +20,15 @@ if (isset($_POST['firstname']) && isset($_POST['username']) && isset($_POST['pas
       Users::login_user($new_id);
       http_redirect(Users::$HOME_URL);
    }
-   else
-   {
-      if (mysql_errno() == 1062)
-      {
-	 $flash['error'] = "Username '{$_POST['username']}' is already in use.";
-      }
-      $error = True;
-   }
-}
+//    else
+//    {
+//       if (mysql_errno() == 1062)
+//       {
+// 	 $flash['error'] = "Username '{$_POST['username']}' is already in use.";
+//       }
+//       $error = True;
+//    }
+// }
 else
 {
    $flash['error'] = "All fields are required";
