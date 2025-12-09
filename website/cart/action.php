@@ -6,7 +6,7 @@ require_once("../include/cart.php");
 require_once("../include/functions.php");
 
 // This page will do the fun stuff of adding to cart, deleting from cart or deleting a whole cart
-session_start();
+if(session_status()==PHP_SESSION_NONE){@session_start();}
 require_login();
 
 $user = Users::current_user();
