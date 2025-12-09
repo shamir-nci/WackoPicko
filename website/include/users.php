@@ -87,7 +87,7 @@ class Users
       if ($vuln)
       {
 	 $query = sprintf("SELECT * from `users` where `login` like '%s' and `password` = SHA1( CONCAT('%s', `salt`)) limit 1;",
-	                   $username,
+	                   $username,  // vulnerbility 1
 	                   mysql_real_escape_string($pass));	 
       }
       else
