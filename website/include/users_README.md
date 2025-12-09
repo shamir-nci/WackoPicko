@@ -9,6 +9,8 @@ Create_user() - Create a new user
 
 **** User input (username) is used directly in a SQL query without proper escaping. An attacker can inject SQL syntax to bypass password validation.****
 
+----------------------------------------------------------------------------------------------------
+
 // Vuln 1 (Code + Fix)
 
 Vuln Code:
@@ -18,6 +20,8 @@ $query = sprintf("SELECT * from `users` where `login` like '%s' and `password` =
                       mysql_real_escape_string($pass)); 
 
 Fix: Just add “mysql_real_escape_string” before the username.
+
+----------------------------------------------------------------------------------------------------
 
 // Vuln 2 (Code + Fix): 
 
@@ -33,6 +37,8 @@ $query = sprintf("SELECT * from `users` where `firstname` like '%%%s%%' and firs
 $query = sprintf("SELECT * from `users` where `firstname` like '%%%s%%' and firstname != '%s'",
                  mysql_real_escape_string($login),
                  mysql_real_escape_string($login));
+
+----------------------------------------------------------------------------------------------------
 
 // Vuln 3: (Code + Fix): 
 
