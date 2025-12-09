@@ -35,7 +35,7 @@ $guestbook = Guestbook::get_all_guestbooks();
      foreach ($guestbook as $guest)
      {
 	?>
-	<p class="comment"><?= $guest["comment"] ?></p> // Vuln Code
+   <p class="comment"><?=h( $guest["comment"] )?></p> //Fixed Code
 	<p> - by <?=h( $guest["name"] ) ?> </p>
 	<?php
      } ?>
