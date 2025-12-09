@@ -35,7 +35,7 @@ $guestbook = Guestbook::get_all_guestbooks();
      foreach ($guestbook as $guest)
      {
 	?>
-   <p class="comment"><?=h( $guest["comment"] )?></p> //Fixed Code
+   <p class="comment"><?=h( $guest["comment"] )?></p> //Fixed Code #4
 	<p> - by <?=h( $guest["name"] ) ?> </p>
 	<?php
      } ?>
