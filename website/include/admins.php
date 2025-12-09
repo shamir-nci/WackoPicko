@@ -54,23 +54,25 @@ class Admins
       }
    }
 
-   function login_admin($adminid)
-   {
-      // Don't trust the php session, we're using our own
-      $query = sprintf("INSERT into `admin_session` (`id`, `admin_id`, `created_on`) VALUES (NULL, '%s', NOW());",
-		       mysql_real_escape_string($adminid));
-      if ($res = mysql_query($query))
-      {
-	 // add the cookie
-	 $id = mysql_insert_id();
-	 setcookie("session", $id);
-	 return mysql_insert_id();
-      }
-      else
-      {
-	 return False;
-      }
-   }
+  function login_admin($adminid)
+{
+    $query = sprintf("INSERT into `admin_session` (`id`, `admin_id`, `created_on`) VALUES (NULL, '%s', NOW());",
+           mysql_real_escape_string($adminid));
+    if ($res = mysql_query($query))
+    {
+        $session_id = bin2hex(random_bytes(32));
+        $update_query = sprintf("UPDATE `admin_session` SET `id` = '%s' WHERE `id` = '%d' LIMIT 1;",
+               mysql_real_escape_string($session_id),
+               mysql_insert_id());
+        mysql_query($update_query);
+        setcookie("session", $session_id);
+        return $session_id;
+    }
+    else
+    {
+        return False;
+    }
+}
    function clean_admin_session()
    {
       mysql_query("DELETE from admin_session WHERE created_on < DATE_SUB( NOW(), INTERVAL 1 HOUR );");
