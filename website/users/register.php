@@ -4,8 +4,6 @@ require_once("../include/users.php");
 require_once("../include/html_functions.php");
 require_once("../include/functions.php");
 
-// session_start();
-
 $error = False;
 if (isset($_POST['firstname']) && isset($_POST['username']) && isset($_POST['password']) && isset($_POST['againpass']) && isset($_POST['lastname'])
     && $_POST['username'] && $_POST['password'] && $_POST['againpass'] && $_POST['firstname'] && $_POST['lastname'])
@@ -20,14 +18,6 @@ if (isset($_POST['firstname']) && isset($_POST['username']) && isset($_POST['pas
       Users::login_user($new_id);
       http_redirect(Users::$HOME_URL);
    }
-//    else
-//    {
-//       if (mysql_errno() == 1062)
-//       {
-// 	 $flash['error'] = "Username '{$_POST['username']}' is already in use.";
-//       }
-//       $error = True;
-//    }
 }
 else
 {
