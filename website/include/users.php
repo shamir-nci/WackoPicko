@@ -45,7 +45,7 @@ class Users
 			  mysql_real_escape_string($username),
 			  mysql_real_escape_string($pass . $salt),
 			  mysql_real_escape_string($firstname),
-	                  mysql_real_escape_string($lastname),
+	         mysql_real_escape_string($lastname),
 			  mysql_real_escape_string($salt),
 			  mysql_real_escape_string($initial_bux));
 			  
