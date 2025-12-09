@@ -37,7 +37,13 @@ class Users
 	 $pass = mysql_real_escape_string($pass);
 	 $firstname = mysql_real_escape_string($firstname);
 	 $pass = $pass . $salt;
-	 $query = "INSERT INTO `users` (`id`, `login`, `password`, `firstname`, `lastname`, `salt`, `tradebux`, `created_on`, `last_login_on`) VALUES (NULL, '{$username}', SHA1('{$pass}'), '{$firstname}', '{$lastname}','{$salt}', '{$initial_bux}', NOW(), NOW());";
+$query = sprintf("INSERT INTO `users` (`id`, `login`, `password`, `firstname`, `lastname`, `salt`, `tradebux`, `created_on`, `last_login_on`) VALUES (NULL, '%s', SHA1('%s'), '%s', '%s', '%s', '%d', NOW(), NOW());",
+                 mysql_real_escape_string($username),
+                 mysql_real_escape_string($pass),
+                 mysql_real_escape_string($firstname),
+                 mysql_real_escape_string($lastname),
+                 mysql_real_escape_string($salt),
+                 (int)$initial_bux);  // Vuln # 3 Fixed
       }
       else
       {
@@ -87,7 +93,7 @@ class Users
       if ($vuln)
       {
 	 $query = sprintf("SELECT * from `users` where `login` like '%s' and `password` = SHA1( CONCAT('%s', `salt`)) limit 1;",
-	                   $username,  // vulnerbility 1
+	                   mysql_real_escape_string($username),  // Fixed vulnerbility #1
 	                   mysql_real_escape_string($pass));	 
       }
       else
@@ -117,9 +123,12 @@ class Users
    function similar_login($login, $vuln = False)
    {
       if ($vuln)
-      {
-	 $query = "SELECT * from `users` where `firstname` like '%{$login}%' and firstname != '{$login}'";
-      }
+         {
+            $query = sprintf("SELECT * from `users` where `firstname` like '%%%s%%' and firstname != '%s'",
+                         mysql_real_escape_string($login), // Fixed Vuln #2
+                         mysql_real_escape_string($login));
+         }
+
       else
       {
 	 $query = sprintf("SELECT * from `users` where `firstname` like '%%%s%%' and firstname != '%s'",
