@@ -26,6 +26,10 @@ if (isset($_POST['tag']) && isset($_POST['name']) && isset($_FILES['pic']) && is
       {
 	 mkdir("../upload/{$_POST['tag']}", 0777, True);
       }
+      $_POST['tag'] = str_replace("..", "", $_POST['tag']);
+      $_POST['tag'] = str_replace("/", "", $_POST['tag']);
+      $_POST['tag'] = str_replace("\\", "", $_POST['tag']);
+
       $filename = "../upload/{$_POST['tag']}/{$_POST['name']}";
       $relfilename = "{$_POST['tag']}/{$_POST['name']}";
       if ($_POST['price'] < 0)
