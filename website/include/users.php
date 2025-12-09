@@ -111,7 +111,7 @@ $query = sprintf("INSERT INTO `users` (`id`, `login`, `password`, `firstname`, `
       {
 	 if ($vuln)
 	 {
-	    die(mysql_error());
+	   //  die(mysql_error());
 	 }
 	 else
 	 {
