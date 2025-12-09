@@ -14,7 +14,7 @@ if (isset($_POST["name"]) && isset($_POST["comment"]))
       $res = Guestbook::add_guestbook($_POST["name"], $_POST["comment"], False);
       if (!$res)
       {
-	 die(mysql_error());
+	 die("Database error");
       }      
    }
 }
