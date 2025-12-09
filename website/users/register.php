@@ -28,7 +28,7 @@ if (isset($_POST['firstname']) && isset($_POST['username']) && isset($_POST['pas
 //       }
 //       $error = True;
 //    }
-// }
+}
 else
 {
    $flash['error'] = "All fields are required";
