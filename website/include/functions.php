@@ -16,7 +16,7 @@ function error_404()
 
 function require_login()
 {
-   if(session_status()==PHP_SESSION_NONE){@session_start();}
+   if(session_status()==PHP_SESSION_NONE){@if(session_status()==PHP_SESSION_NONE){@session_start();}}
    if (!Users::is_logged_in())
    {
       http_redirect(Users::$LOGIN_URL);

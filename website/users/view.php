@@ -4,7 +4,7 @@ require_once("../include/pictures.php");
 require_once("../include/html_functions.php");
 require_once("../include/functions.php");
 
-if(session_status()==PHP_SESSION_NONE){@session_start();}
+if(session_status()==PHP_SESSION_NONE){@if(session_status()==PHP_SESSION_NONE){@session_start();}}
 
 if (!isset($usercheck))
 {

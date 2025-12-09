@@ -2,7 +2,7 @@
 
 require_once("users.php");
 require_once("functions.php");
-if(session_status()==PHP_SESSION_NONE){@session_start();}
+if(session_status()==PHP_SESSION_NONE){@if(session_status()==PHP_SESSION_NONE){@session_start();}}
 
 function our_header($selected = "", $search_terms = "")
 {

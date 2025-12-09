@@ -6,7 +6,7 @@ require_once("../include/cart.php");
 require_once("../include/html_functions.php");
 require_once("../include/functions.php");
 
-if(session_status()==PHP_SESSION_NONE){@session_start();}
+if(session_status()==PHP_SESSION_NONE){@if(session_status()==PHP_SESSION_NONE){@session_start();}}
 require_login();
 
 // load all the variables I'll need
