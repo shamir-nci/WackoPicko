@@ -76,7 +76,10 @@ $query = sprintf("INSERT INTO `users` (`id`, `login`, `password`, `firstname`, `
 
    function login_user($userid)
    {
-      if(session_status()==PHP_SESSION_NONE){@if(session_status()==PHP_SESSION_NONE){@session_start();}}
+      if (session_status() == PHP_SESSION_NONE) 
+         {
+            @session_start();
+         }
       $_SESSION['userid'] = $userid;
       $query = sprintf("UPDATE `users` SET `last_login_on` = NOW( ) WHERE `users`.`id` = '%d' LIMIT 1;",
 		       mysql_real_escape_string($userid));
