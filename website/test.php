@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . '/mysql-compat.php';
 $head = $_GET['head'];
 $title = $_GET['title'];
 $href = $_GET['href'];

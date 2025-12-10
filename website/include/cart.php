@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . '/mysql-compat.php';
 require_once("ourdb.php");
 
 class Cart

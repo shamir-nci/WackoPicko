@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . '/mysql-compat.php';
 require_once("include/html_functions.php");
 require_once("include/functions.php");
 
