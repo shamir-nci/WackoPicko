@@ -10,7 +10,7 @@ COPY . /var/www/html
 WORKDIR /var/www/html
 
 # Set permissions
-RUN chmod -R 755 /var/www/html/upload
+RUN chmod -R 755 /var/www/html/website/upload
 
 # Enable Apache mod_rewrite
 RUN a2enmod rewrite
