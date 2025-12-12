@@ -25,7 +25,7 @@ The primary purpose of this project is to analyze, identify, and remediate criti
 - **CRUD Operations:** Users are able to create, read, update and delete photos.
 - **User Roles:** Users and admin with different privileges.
 - **Database:** MYSQL database with multiple tables.
-- **Technology:** PHP 7.4+, MySQL 5.7+, Apache
+- **Technology:** PHP 5+, MySQL
 
 ## Features and Security Objectives
 
