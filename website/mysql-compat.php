@@ -1,3 +1,4 @@
+<?php require_once(__DIR__ . "/bootstrap.php"); ?>
 <?php
 /**
  * MySQL Legacy Compatibility Layer - Using PDO (Extended)
