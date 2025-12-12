@@ -4,7 +4,6 @@ ini_set('display_errors', 0);
 ini_set('log_errors', 0);
 
 // Load compatibility layer FIRST
-require_once __DIR__ . '/mysql-compat.php';
 
 // Then load other includes
 $includes = [

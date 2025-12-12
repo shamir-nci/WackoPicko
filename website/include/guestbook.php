@@ -6,7 +6,6 @@
  */
 
 // Load compatibility layer
-require_once __DIR__ . '/mysql-compat.php';
 
 // Load database connection
 require_once __DIR__ . '/ourdb.php';

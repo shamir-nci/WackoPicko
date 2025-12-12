@@ -1,6 +1,5 @@
 <?php require_once(__DIR__ . "/bootstrap.php"); ?>
 <?php
-require_once __DIR__ . '/mysql-compat.php';
 
 require_once("../include/pictures.php");
 require_once("../include/comments.php");
