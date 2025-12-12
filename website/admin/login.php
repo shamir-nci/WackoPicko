@@ -30,6 +30,6 @@ if ($bad_login)
        <input type="submit" value="submit" />
    </form>
 <?php
-      }
+}
 
 ?>
