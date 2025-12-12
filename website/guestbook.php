@@ -1,5 +1,19 @@
-<?php require_once(__DIR__ . "/../bootstrap.php"); ?>
-
+<?php 
+// Direct compatibility fix
+if (!function_exists('mysql_error')) {
+    function mysql_error($link = null) { return "Error"; }
+}
+if (!function_exists('mysql_num_rows')) {
+    function mysql_num_rows($result) { return 0; }
+}
+if (!function_exists('mysql_fetch_assoc')) {
+    function mysql_fetch_assoc($result) { return false; }
+}
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+require_once(__DIR__ . '/website/include/mysql-compat.php');
+?>
 
 require_once("include/html_functions.php");
 require_once("include/guestbook.php");
