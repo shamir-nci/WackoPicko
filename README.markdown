@@ -150,9 +150,10 @@ Test XSS: <script>alert(1)</script> → Shows as text ✓
 Click logout link
 
 8. Security Testing
-✅ SQLi: admin' OR 1=1 → Login fails
-✅ XSS: <script> → Rendered as text
-✅ Dir Traversal: ../../admin → Blocked in /upload/
+
+- SQLi: admin' OR 1=1 → Login fails
+- XSS: <script> → Rendered as text
+- Dir Traversal: ../../admin → Blocked in /upload/
 
 **Demo flow**: Login → Upload → Guestbook → Test attacks (all blocked)
 
