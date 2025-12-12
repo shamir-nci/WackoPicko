@@ -225,11 +225,11 @@ Result: File saved in /upload/admin/, not /admin/
 
 3. Overall Testing Results
 
-✅ All 6 vulnerabilities successfully blocked (3 are tested successfully)
-✅ Application functionality fully preserved
-✅ No performance degradation
-✅ Zero false positives in security controls
-✅ 100% remediation rate confirmed
+- All 6 vulnerabilities successfully blocked (3 are tested successfully)
+- Application functionality fully preserved
+- No performance degradation
+- Zero false positives in security controls
+- 100% remediation rate confirmed
 
 ### Contributions and References
 
@@ -242,16 +242,5 @@ Result: File saved in /upload/admin/, not /admin/
 - OWASP Top 10 (2021): A01, A03, A07 compliance
 - STRIDE Threat Modeling: Systematic vulnerability identification
 - Secure SDLC: Security integrated across development lifecycle
-
-## Development Environment
-
-- **Editor:** GitHub Codespaces (VS Code in browser)
-- **Version Control:** Git & GitHub
-- **Platform:** Cloud-based (no local installation)
-
-## Project Timeline
-
-- **Week 1:** Setup, planning and analyze vulnerabilities
-- **Week 2:** Fix 2 vulnerabilities and deploy app
 
 
