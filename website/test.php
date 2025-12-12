@@ -1,5 +1,5 @@
 <?php require_once(__DIR__ . "/../bootstrap.php"); ?>
-<?php
+
 $head = $_GET['head'];
 $title = $_GET['title'];
 $href = $_GET['href'];

@@ -1,5 +1,5 @@
 <?php require_once(__DIR__ . "/../bootstrap.php"); ?>
-<?php
+
 
 require_once("include/html_functions.php");
 $checked = false;

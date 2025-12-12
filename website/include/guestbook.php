@@ -1,5 +1,5 @@
 <?php require_once(__DIR__ . "/../bootstrap.php"); ?>
-<?php
+
 /**
  * Guestbook Class - Fixed for PHP 8.x compatibility
  * Works with mysql-compat.php PDO layer

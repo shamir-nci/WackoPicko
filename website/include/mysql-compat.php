@@ -1,5 +1,5 @@
 <?php require_once(__DIR__ . "/../bootstrap.php"); ?>
-<?php
+
 /**
  * MySQL Legacy Compatibility Layer - Using PDO (Extended)
  * Supports mysql_connect, mysql_select_db, mysql_query, mysql_fetch_array, mysql_set_charset, etc.

@@ -1,5 +1,5 @@
 <?php require_once(__DIR__ . "/../bootstrap.php"); ?>
-<?php
+
 
 require_once("../include/comments.php");
 require_once("../include/users.php");
