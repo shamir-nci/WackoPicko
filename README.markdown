@@ -233,12 +233,12 @@ Result: File saved in /upload/admin/, not /admin/
 
 ### Contributions and References
 
-# Original Project
+1. Original Project
 - WackoPicko: Educational web application for cybersecurity training
 - License: Educational use (MIT)
 - Purpose: Learning platform for secure web development
 
-# Security Frameworks & Standards
+2. Security Frameworks & Standards
 - OWASP Top 10 (2021): A01, A03, A07 compliance
 - STRIDE Threat Modeling: Systematic vulnerability identification
 - Secure SDLC: Security integrated across development lifecycle
