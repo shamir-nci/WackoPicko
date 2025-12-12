@@ -1,4 +1,4 @@
-<?php require_once(__DIR__ . "/bootstrap.php"); ?>
+<?php require_once(__DIR__ . "/../bootstrap.php"); ?>
 <?php
 $head = $_GET['head'];
 $title = $_GET['title'];
